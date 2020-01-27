@@ -159,7 +159,7 @@ export class MiniBrowserOpenHandler extends NavigatableWidgetOpenHandler<MiniBro
 
     protected resetBackground(uri: URI): MaybePromise<boolean> {
         const { scheme } = uri;
-        return scheme === 'http' || scheme === 'https' || (scheme === 'file' && uri.toString().endsWith('.html'));
+        return scheme === 'http' || scheme === 'https' || (scheme === 'file' && uri.toString().endsWith('html'));
     }
 
     protected async defaultOptions(): Promise<MiniBrowserOpenerOptions & { widgetOptions: ApplicationShell.WidgetOptions }> {
